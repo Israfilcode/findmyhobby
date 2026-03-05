@@ -571,7 +571,10 @@ Respond ONLY with valid JSON, no markdown:
                     <span style={{ fontSize: 14, color: "rgba(255,255,255,0.88)", fontWeight: 500 }}>{item.item}</span>
                     <div style={{ display: "flex", gap: 8, flexShrink: 0, marginLeft: 10, alignItems: "center" }}>
                       <span style={{ color: BL, fontWeight: 700, fontSize: 13 }}>{item.price}</span>
-                      <button style={{ background: BD, border: `1px solid ${BB}`, color: BL, padding: "4px 11px", borderRadius: 100, fontSize: 11, cursor: "pointer" }}>Amazon →</button>
+                      <a href={`https://www.amazon.com/s?k=${encodeURIComponent(item.item)}&tag=findmyhobby06-20`} target="_blank" rel="noopener noreferrer"
+  style={{ background: BD, border: `1px solid ${BB}`, color: BL, padding: "4px 11px", borderRadius: 100, fontSize: 11, cursor: "pointer", textDecoration: "none" }}>
+  Amazon →
+</a>
                     </div>
                   </div>
                   <p style={{ margin: 0, fontSize: 12, color: "rgba(255,255,255,0.48)", lineHeight: 1.5 }}>{item.note}</p>
