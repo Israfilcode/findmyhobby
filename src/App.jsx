@@ -134,13 +134,16 @@ export default function FindMyHobby() {
   };
 
   const handlePurchase = async (selectedPlan) => {
-    setPlan(selectedPlan);
-    setPaymentLoading(true);
-    await new Promise(r => setTimeout(r, 1500));
-    setPaymentLoading(false);
-    fetchRecommendations(answers, selectedPlan);
-  };
-
+  setPlan(selectedPlan);
+  setPaymentLoading(true);
+  const response = await fetch("/api/checkout", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ plan: selectedPlan })
+  });
+  const { url } = await response.json();
+  window.location.href = url;
+};
   const fetchRecommendations = async (finalAnswers, selectedPlan) => {
     setScreen("loading");
     setError(null);
