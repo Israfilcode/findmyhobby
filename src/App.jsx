@@ -146,6 +146,7 @@ export default function FindMyHobby() {
   const handlePurchase = async (selectedPlan) => {
   setPlan(selectedPlan);
   setPaymentLoading(true);
+  sessionStorage.setItem("answers", JSON.stringify(answers));
   const response = await fetch("/api/checkout", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
