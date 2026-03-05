@@ -107,21 +107,7 @@ export default function FindMyHobby() {
     "Analyzing your personality...",
     "Thinking beyond the obvious...",
     "Finding your perfect matches...",
-    "Almost there..."
-  const params = new URLSearchParams(window.location.search);
-    setTimeout(() => {
-      const newAnswers = [...answers, { question: questions[currentQ].question, answer: option.label }];
-      setAnswers(newAnswers);
-      if (currentQ < questions.length - 1) {
-        setCurrentQ(currentQ + 1);
-        setAnimating(false);
-      } else {
-        setScreen("paywall");
-        setAnimating(false);
-      }
-    }, 250);
-  };
-
+    "Almost there..."];
   const handleBack = () => {
     if (currentQ === 0) { setScreen("landing"); setAnswers([]); }
     else {
