@@ -215,8 +215,6 @@ Respond ONLY with valid JSON, no markdown:
     }
   };
 
-  const resetAll = () => {
-
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     if (params.get("payment") === "success") {
@@ -229,6 +227,7 @@ Respond ONLY with valid JSON, no markdown:
     }
   }, []);
 
+  const resetAll = () => {
     setScreen("landing"); setCurrentQ(0); setAnswers([]);
     setSelectedHobby(null); setResults(null); setError(null);
     setLoadingMsg(0); setPlan(null); setPaymentLoading(false);
