@@ -194,14 +194,11 @@ Respond ONLY with valid JSON, no markdown:
 }`;
 
     try {
-      const response = await fetch("https://api.anthropic.com/v1/messages", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          model: "claude-sonnet-4-20250514",
-          max_tokens: isDeep ? 4000 : 2500,
-          messages: [{ role: "user", content: prompt }]
-        })
+      const response = await fetch("/api/recommend", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ prompt })
+});
       });
       const data = await response.json();
       clearInterval(msgInterval);
