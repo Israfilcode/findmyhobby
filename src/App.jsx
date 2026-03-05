@@ -199,7 +199,6 @@ Respond ONLY with valid JSON, no markdown:
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({ prompt })
 });
-      });
       const data = await response.json();
       clearInterval(msgInterval);
       const text = data.content?.[0]?.text || "";
