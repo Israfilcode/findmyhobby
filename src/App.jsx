@@ -109,7 +109,17 @@ export default function FindMyHobby() {
     "Finding your perfect matches...",
     "Almost there..."
   ];
-
+  useEffect(() => {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("payment") === "success") {
+    const savedPlan = params.get("plan");
+    const savedAnswers = JSON.parse(sessionStorage.getItem("answers") || "[]");
+    if (savedAnswers.length > 0) {
+      setPlan(savedPlan);
+      fetchRecommendations(savedAnswers, savedPlan);
+    }
+  }
+}, []);
   const handleAnswer = (option) => {
     setAnimating(true);
     setTimeout(() => {
