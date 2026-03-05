@@ -108,20 +108,7 @@ export default function FindMyHobby() {
     "Thinking beyond the obvious...",
     "Finding your perfect matches...",
     "Almost there..."
-  ];
-  useEffect(() => {
   const params = new URLSearchParams(window.location.search);
-  if (params.get("payment") === "success") {
-    const savedPlan = params.get("plan");
-    const savedAnswers = JSON.parse(sessionStorage.getItem("answers") || "[]");
-    if (savedAnswers.length > 0) {
-      setPlan(savedPlan);
-      fetchRecommendations(savedAnswers, savedPlan);
-    }
-  }
-}, []);
-  const handleAnswer = (option) => {
-    setAnimating(true);
     setTimeout(() => {
       const newAnswers = [...answers, { question: questions[currentQ].question, answer: option.label }];
       setAnswers(newAnswers);
@@ -228,6 +215,19 @@ Respond ONLY with valid JSON, no markdown:
   };
 
   const resetAll = () => {
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("payment") === "success") {
+      const savedPlan = params.get("plan");
+      const savedAnswers = JSON.parse(sessionStorage.getItem("answers") || "[]");
+      if (savedAnswers.length > 0) {
+        setPlan(savedPlan);
+        fetchRecommendations(savedAnswers, savedPlan);
+      }
+    }
+  }, []);
+
     setScreen("landing"); setCurrentQ(0); setAnswers([]);
     setSelectedHobby(null); setResults(null); setError(null);
     setLoadingMsg(0); setPlan(null); setPaymentLoading(false);
