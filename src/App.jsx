@@ -566,7 +566,7 @@ Respond ONLY with valid JSON, no markdown:
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 3 }}>
                     <span style={{ fontSize: 14, color: "rgba(255,255,255,0.88)", fontWeight: 500 }}>{item.item}</span>
                     <div style={{ display: "flex", gap: 8, flexShrink: 0, marginLeft: 10, alignItems: "center" }}>
-                      <span style={{ color: BL, fontWeight: 700, fontSize: 13 }}>{item.price}</span>
+                      <span style={{ color: BL, fontWeight: 700, fontSize: 13 }}>est. {item.price}</span>
                       <a href={`https://www.amazon.com/s?k=${encodeURIComponent(item.item)}&tag=findmyhobby06-20`} target="_blank" rel="noopener noreferrer"
   style={{ background: BD, border: `1px solid ${BB}`, color: BL, padding: "4px 11px", borderRadius: 100, fontSize: 11, cursor: "pointer", textDecoration: "none" }}>
   Amazon →
