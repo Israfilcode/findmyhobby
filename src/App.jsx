@@ -108,6 +108,21 @@ export default function FindMyHobby() {
     "Thinking beyond the obvious...",
     "Finding your perfect matches...",
     "Almost there..."];
+  const handleAnswer = (option) => {
+    setAnimating(true);
+    setTimeout(() => {
+      const newAnswers = [...answers, { question: questions[currentQ].question, answer: option.label }];
+      setAnswers(newAnswers);
+      if (currentQ < questions.length - 1) {
+        setCurrentQ(currentQ + 1);
+        setAnimating(false);
+      } else {
+        setScreen("paywall");
+        setAnimating(false);
+      }
+    }, 250);
+  };
+
   const handleBack = () => {
     if (currentQ === 0) { setScreen("landing"); setAnswers([]); }
     else {
