@@ -134,7 +134,7 @@ export default function FindMyHobby() {
   const handlePurchase = async (selectedPlan) => {
   setPlan(selectedPlan);
   setPaymentLoading(true);
-  sessionStorage.setItem("answers", JSON.stringify(answers));
+  localStorage.setItem("answers", JSON.stringify(answers));
   const response = await fetch("/api/checkout", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -221,7 +221,7 @@ Respond ONLY with valid JSON, no markdown:
     const params = new URLSearchParams(window.location.search);
     if (params.get("payment") === "success") {
       const savedPlan = params.get("plan");
-      const savedAnswers = JSON.parse(sessionStorage.getItem("answers") || "[]");
+      const savedAnswers = JSON.parse(localStorage.getItem("answers") || "[]");
       if (savedAnswers.length > 0) {
         setPlan(savedPlan);
         fetchRecommendations(savedAnswers, savedPlan);
