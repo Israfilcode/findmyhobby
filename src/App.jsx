@@ -674,41 +674,61 @@ Respond ONLY with valid JSON, no markdown:
           <button onClick={() => setModal(null)} style={{ float: "right", background: "none", border: "none", color: "rgba(255,255,255,0.5)", fontSize: 20, cursor: "pointer" }}>✕</button>
 
           {modal === "privacy" && <>
-            <h2 style={{ color: "#92BFFF", marginBottom: 20 }}>Privacy Policy</h2>
-            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>Last updated: January 2025</p>
-            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>FindMyHobby ("we", "us") operates findmyhobby.org. We collect only the information necessary to provide our service.</p>
-            <h3 style={{ color: "#92BFFF", marginTop: 20 }}>Information We Collect</h3>
-            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>We collect your quiz answers to generate personalized hobby recommendations. We collect payment information through Stripe (we never store your card details). We may collect your email address if provided during checkout.</p>
-            <h3 style={{ color: "#92BFFF", marginTop: 20 }}>How We Use Your Information</h3>
-            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>Your quiz answers are used solely to generate your hobby recommendations via AI. We do not sell your data to third parties.</p>
-            <h3 style={{ color: "#92BFFF", marginTop: 20 }}>Third-Party Services</h3>
-            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>We use Stripe for payment processing and Anthropic for AI recommendations. We participate in the Amazon Associates program. These services have their own privacy policies.</p>
-            <h3 style={{ color: "#92BFFF", marginTop: 20 }}>Contact</h3>
-            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>For privacy questions, contact us at support@findmyhobby.org</p>
+            <h2 style={{ color: "#92BFFF", marginBottom: 8 }}>Privacy Policy</h2>
+            <p style={{ color: "rgba(255,255,255,0.45)", lineHeight: 1.8, fontSize: 13, marginBottom: 20 }}>Last updated: March 2026</p>
+            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14, marginBottom: 16 }}>Your privacy matters to us. FindMyHobby.org collects only what is necessary to provide our service and does not sell your data to third parties.</p>
+            <h3 style={{ color: "#92BFFF", marginTop: 20, marginBottom: 8 }}>Information We Collect</h3>
+            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>We collect your quiz answers to generate personalised hobby recommendations. Payments are processed securely by Stripe — we never store your card details. We may collect your email address if you opt in to save your results. We collect anonymised, aggregated usage data via analytics to improve the site.</p>
+            <h3 style={{ color: "#92BFFF", marginTop: 20, marginBottom: 8 }}>How We Use Your Information</h3>
+            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>Your quiz answers are sent to Anthropic's Claude API solely to generate your results. We do not store your answers beyond your session unless you explicitly opt in. We use aggregated data to improve recommendation quality over time.</p>
+            <h3 style={{ color: "#92BFFF", marginTop: 20, marginBottom: 8 }}>Third-Party Services</h3>
+            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>We use Stripe (payments), Anthropic (AI generation), Vercel (hosting), and Amazon Associates (affiliate links). Each service operates under its own privacy policy. Clicking Amazon affiliate links may result in us earning a small commission at no cost to you.</p>
+            <h3 style={{ color: "#92BFFF", marginTop: 20, marginBottom: 8 }}>Cookies & Tracking</h3>
+            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>We use session storage to temporarily hold your quiz answers during your visit. We do not use advertising cookies or cross-site trackers. Analytics data is aggregated and anonymised.</p>
+            <h3 style={{ color: "#92BFFF", marginTop: 20, marginBottom: 8 }}>Your Rights</h3>
+            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>You have the right to access, correct, or delete any personal data we hold about you. To exercise these rights, email us and we will respond within 30 days.</p>
+            <h3 style={{ color: "#92BFFF", marginTop: 20, marginBottom: 8 }}>Children's Privacy</h3>
+            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>FindMyHobby.org is not directed at children under 13. We do not knowingly collect data from children under 13.</p>
+            <h3 style={{ color: "#92BFFF", marginTop: 20, marginBottom: 8 }}>Contact</h3>
+            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>For privacy questions: support@findmyhobby.org</p>
           </>}
 
           {modal === "terms" && <>
-            <h2 style={{ color: "#92BFFF", marginBottom: 20 }}>Terms of Service</h2>
-            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>Last updated: January 2025</p>
-            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>By using FindMyHobby, you agree to these terms. Our service provides AI-generated hobby recommendations for personal use only.</p>
-            <h3 style={{ color: "#92BFFF", marginTop: 20 }}>Service</h3>
-            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>FindMyHobby provides personalized hobby recommendations based on your quiz answers. Results are generated by AI and are for informational purposes only.</p>
-            <h3 style={{ color: "#92BFFF", marginTop: 20 }}>Payments</h3>
-            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>All payments are one-time fees processed securely through Stripe. Prices are listed in USD.</p>
-            <h3 style={{ color: "#92BFFF", marginTop: 20 }}>Limitation of Liability</h3>
-            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>FindMyHobby is not responsible for any outcomes resulting from following our recommendations. Use your own judgment when pursuing any hobby.</p>
-            <h3 style={{ color: "#92BFFF", marginTop: 20 }}>Contact</h3>
-            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>For questions, contact support@findmyhobby.org</p>
+            <h2 style={{ color: "#92BFFF", marginBottom: 8 }}>Terms of Service</h2>
+            <p style={{ color: "rgba(255,255,255,0.45)", lineHeight: 1.8, fontSize: 13, marginBottom: 20 }}>Last updated: March 2026</p>
+            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14, marginBottom: 16 }}>By accessing or using FindMyHobby.org, you agree to be bound by these Terms. If you do not agree, please do not use the Service.</p>
+            <h3 style={{ color: "#92BFFF", marginTop: 20, marginBottom: 8 }}>The Service</h3>
+            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>FindMyHobby.org provides AI-generated hobby recommendations in three tiers: Free (basic suggestions), Basic ($1.99 one-time), and Deep Research ($3.99 one-time). Results are for personal, non-commercial use only.</p>
+            <h3 style={{ color: "#92BFFF", marginTop: 20, marginBottom: 8 }}>Eligibility</h3>
+            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>You must be at least 13 years old to use the Service. Users under 18 must have parental consent.</p>
+            <h3 style={{ color: "#92BFFF", marginTop: 20, marginBottom: 8 }}>Payments</h3>
+            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>All payments are one-time fees processed securely by Stripe. Prices are in USD. There are no subscriptions or recurring charges. We do not store your card details.</p>
+            <h3 style={{ color: "#92BFFF", marginTop: 20, marginBottom: 8 }}>AI Content Disclaimer</h3>
+            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>Recommendations are generated by AI and may occasionally be incomplete or not suited to your specific circumstances. All suggestions should be independently verified before making purchasing decisions.</p>
+            <h3 style={{ color: "#92BFFF", marginTop: 20, marginBottom: 8 }}>Affiliate Links</h3>
+            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>FindMyHobby.org participates in the Amazon Associates Programme. We may earn a commission on qualifying purchases at no extra cost to you. Affiliate relationships do not influence AI recommendations.</p>
+            <h3 style={{ color: "#92BFFF", marginTop: 20, marginBottom: 8 }}>Prohibited Uses</h3>
+            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>You may not scrape or extract data from the Service, resell or redistribute results, attempt to reverse-engineer our systems, or use the Service for any unlawful purpose.</p>
+            <h3 style={{ color: "#92BFFF", marginTop: 20, marginBottom: 8 }}>Limitation of Liability</h3>
+            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>FindMyHobby.org is not liable for any indirect, incidental, or consequential damages arising from use of the Service. Our total liability shall not exceed the amount you paid us in the 30 days preceding any claim.</p>
+            <h3 style={{ color: "#92BFFF", marginTop: 20, marginBottom: 8 }}>Changes to Terms</h3>
+            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>We may update these Terms at any time. Continued use of the Service after changes are posted constitutes acceptance of the revised Terms.</p>
+            <h3 style={{ color: "#92BFFF", marginTop: 20, marginBottom: 8 }}>Contact</h3>
+            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>Questions about these Terms: support@findmyhobby.org</p>
           </>}
 
           {modal === "refund" && <>
-            <h2 style={{ color: "#92BFFF", marginBottom: 20 }}>Refund Policy</h2>
-            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>Last updated: January 2025</p>
-            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>Due to the digital nature of our service, all sales are final once your results have been generated and delivered.</p>
-            <h3 style={{ color: "#92BFFF", marginTop: 20 }}>Exceptions</h3>
-            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>If you were charged but did not receive your results due to a technical error, contact us within 7 days for a full refund.</p>
-            <h3 style={{ color: "#92BFFF", marginTop: 20 }}>How to Request</h3>
-            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>Email support@findmyhobby.org with your order details and we will respond within 2 business days.</p>
+            <h2 style={{ color: "#92BFFF", marginBottom: 8 }}>Refund Policy</h2>
+            <p style={{ color: "rgba(255,255,255,0.45)", lineHeight: 1.8, fontSize: 13, marginBottom: 20 }}>Last updated: March 2026</p>
+            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14, marginBottom: 16 }}>We want you to be satisfied with your FindMyHobby experience. Because results are delivered instantly as digital content, our refund policy is designed to be fair for both sides.</p>
+            <h3 style={{ color: "#92BFFF", marginTop: 20, marginBottom: 8 }}>You Are Eligible for a Full Refund If:</h3>
+            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>• Your results were not generated due to a technical error on our end.<br/>• You were charged but never received access to your paid results.<br/>• You were charged more than once for the same purchase.<br/>• You are a first-time user genuinely unsatisfied with your results — request within 7 days of purchase.</p>
+            <h3 style={{ color: "#92BFFF", marginTop: 20, marginBottom: 8 }}>Refunds Will Not Be Issued If:</h3>
+            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>• You simply changed your mind after receiving complete results.<br/>• More than 14 days have passed since purchase.<br/>• You have previously received a refund from us.</p>
+            <h3 style={{ color: "#92BFFF", marginTop: 20, marginBottom: 8 }}>Upgrades</h3>
+            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>If you purchased Basic ($1.99) and want to upgrade to Deep Research ($3.99), email us and we'll credit your $1.99 — you only pay the $2.00 difference.</p>
+            <h3 style={{ color: "#92BFFF", marginTop: 20, marginBottom: 8 }}>How to Request a Refund</h3>
+            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>Email support@findmyhobby.org with your purchase email address, date of purchase, amount charged, and a brief description of the issue. We respond within 2 business days. Approved refunds are returned to your original payment method within 5–10 business days.</p>
           </>}
         </div>
       </div>
