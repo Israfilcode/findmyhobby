@@ -363,7 +363,7 @@ Respond ONLY with valid JSON, no markdown:
             </div>
           </div>
 
-          <div style={{ width: "100%", maxWidth: 640, opacity: animating ? 0 : 1, transition: "opacity 0.25s" }}>
+          <div style={{ width: "100%", maxWidth: 640, opacity: 1 }}>
             <div style={{ textAlign: "center", marginBottom: 36 }}>
               {currentQ === 0 && (
                 <div style={{ background: BD, border: `1px solid ${BB}`, borderRadius: 100, padding: "5px 16px", fontSize: 11, letterSpacing: "0.14em", color: BL, marginBottom: 16, display: "inline-block" }}>
