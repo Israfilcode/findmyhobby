@@ -111,7 +111,7 @@ export default function FindMyHobby() {
     "Almost there..."];
   const handleAnswer = (option) => {
     setAnimating(true);
-    setTimeout(() => {
+    setTimeout(() => { 
       const newAnswers = [...answers, { question: questions[currentQ].question, answer: option.label }];
       setAnswers(newAnswers);
       if (currentQ < questions.length - 1) {
@@ -121,14 +121,14 @@ export default function FindMyHobby() {
         setScreen("paywall");
         setAnimating(false);
       }
-    }, 250);
+    }, 350);
   };
 
   const handleBack = () => {
     if (currentQ === 0) { setScreen("landing"); setAnswers([]); }
     else {
       setAnimating(true);
-      setTimeout(() => { setCurrentQ(currentQ - 1); setAnswers(answers.slice(0, -1)); setAnimating(false); }, 200);
+      setTimeout(() => {  setCurrentQ(currentQ - 1); setAnswers(answers.slice(0, -1)); setAnimating(false); }, 200);
     }
   };
 
