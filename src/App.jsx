@@ -376,7 +376,7 @@ Respond ONLY with valid JSON, no markdown:
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
               {questions[currentQ].options.map((option, i) => (
                 <button key={i} onClick={() => handleAnswer(option)}
-                  style={{ background: "rgba(255,255,255,0.025)", border: "1px solid rgba(255,255,255,0.07)", borderRadius: 16, padding: "22px 18px", cursor: "pointer", textAlign: "left", transition: "all 0.2s", color: "#FFFFFF" }}
+                  style={{ background: "rgba(255,255,255,0.025)", border: "1px solid rgba(255,255,255,0.07)", borderRadius: 16, padding: "22px 18px", cursor: "pointer", textAlign: "left", transition: "all 0.2s", color: "#FFFFFF", overflow: "hidden", position: "relative" }}
                   onMouseOver={e => { e.currentTarget.style.background = BD; e.currentTarget.style.borderColor = BB; e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = `0 8px 24px ${BG}`; }}
                   onMouseOut={e => { e.currentTarget.style.background = "rgba(255,255,255,0.025)"; e.currentTarget.style.borderColor = "rgba(255,255,255,0.07)"; e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "none"; }}>
                   <div style={{ fontSize: 26, marginBottom: 10 }}>{option.icon}</div>
