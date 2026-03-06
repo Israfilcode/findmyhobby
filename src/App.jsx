@@ -658,7 +658,7 @@ Respond ONLY with valid JSON, no markdown:
     {/* FOOTER */}
     {screen === "landing" && (
       <footer style={{ textAlign: "center", padding: "24px", borderTop: "1px solid rgba(255,255,255,0.06)", position: "relative", zIndex: 1 }}>
-        <p style={{ fontSize: 12, color: "rgba(255,255,255,0.35)", margin: "0 0 8px" }}>© 2025 FindMyHobby. All rights reserved.</p>
+        <p style={{ fontSize: 12, color: "rgba(255,255,255,0.35)", margin: "0 0 8px" }}>© 2026 FindMyHobby. All rights reserved.</p>
         <div style={{ display: "flex", gap: 20, justifyContent: "center" }}>
           <button onClick={() => setModal("privacy")} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.4)", fontSize: 12, cursor: "pointer", textDecoration: "underline" }}>Privacy Policy</button>
           <button onClick={() => setModal("terms")} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.4)", fontSize: 12, cursor: "pointer", textDecoration: "underline" }}>Terms of Service</button>
