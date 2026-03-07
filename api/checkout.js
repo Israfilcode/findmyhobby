@@ -8,7 +8,7 @@ export default async function handler(req, res) {
   }
 
   const { plan } = req.body;
-  const amount = plan === 'deep' ? 399 : 199;
+  const amount = plan === 'deep' ? 299 : 99;
   const name = plan === 'deep' ? 'Deep Research' : 'Basic Results';
 
   const session = await stripe.checkout.sessions.create({
