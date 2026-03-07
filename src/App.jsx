@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import { useState, useEffect } from "react";
 
 const questions = [
@@ -738,6 +739,7 @@ Respond ONLY with valid JSON, no markdown:
       </div>
     )}
 
+    <Analytics />
     </div>
   );
 }
