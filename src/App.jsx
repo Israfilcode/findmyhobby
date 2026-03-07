@@ -4,79 +4,79 @@ import { useState, useEffect } from "react";
 const questions = [
   {
     id: 1,
-    question: "Why are you looking for a hobby right now?",
-    subtitle: "This is the most important question — be real with yourself.",
+    question: "Be honest. Why are you actually here?",
+    subtitle: "No judgment. We've heard it all.",
     options: [
-      { label: "I'm bored and need something exciting in my life", icon: "🔥" },
-      { label: "I want to meet new people and build connections", icon: "🤝" },
-      { label: "I need an escape from stress and work", icon: "🧘" },
-      { label: "I want to grow a skill or become good at something", icon: "🎯" }
+      { label: "I'm so bored I googled 'what to do with my life'", icon: "😵" },
+      { label: "I need something that isn't my phone or Netflix", icon: "📵" },
+      { label: "Work is draining me and I need an escape", icon: "🏃" },
+      { label: "I want to actually be good at something", icon: "🎯" }
     ]
   },
   {
     id: 2,
-    question: "How would your friends describe your energy?",
-    subtitle: "Be honest — this shapes everything.",
+    question: "It's Saturday at 11am. What are you actually doing?",
+    subtitle: "Not what you wish you were doing. What you're actually doing.",
     options: [
-      { label: "High energy, always moving", icon: "⚡" },
-      { label: "Calm and steady, I like flow", icon: "🌊" },
-      { label: "Bursts of energy, then recharge", icon: "🔋" },
-      { label: "Laid back, I prefer low effort", icon: "😌" }
+      { label: "Already up and doing something physical", icon: "⚡" },
+      { label: "Coffee in hand, easing into the day slowly", icon: "☕" },
+      { label: "Still in bed, phone in hand, no regrets", icon: "🛌" },
+      { label: "It depends on my mood honestly", icon: "🎲" }
     ]
   },
   {
     id: 3,
-    question: "What does your ideal free time look like?",
-    subtitle: "Not what you think you should do — what you actually want.",
+    question: "Which of these sounds the most fun to you?",
+    subtitle: "Go with your gut — don't overthink it.",
     options: [
-      { label: "Getting outside, moving my body", icon: "🏕️" },
-      { label: "Creating something with my hands", icon: "🎨" },
-      { label: "Learning or exploring something new", icon: "🔍" },
-      { label: "Relaxing, zoning out, recharging", icon: "🛋️" }
+      { label: "Making or building something with my hands", icon: "🛠️" },
+      { label: "Moving my body and being active", icon: "🏃" },
+      { label: "Getting lost in a world of ideas", icon: "🧠" },
+      { label: "Creating something artistic or expressive", icon: "🎨" }
     ]
   },
   {
     id: 4,
-    question: "How do you feel about learning curves?",
-    subtitle: "This tells us how fast you want to feel good at something.",
+    question: "How do you feel when you're bad at something new?",
+    subtitle: "This is more revealing than you think.",
     options: [
-      { label: "I want results fast — instant gratification", icon: "🚀" },
-      { label: "Some learning is fine, not too steep", icon: "📈" },
-      { label: "I enjoy mastering something over time", icon: "🏆" },
-      { label: "I like exploring without pressure to improve", icon: "🌸" }
+      { label: "I hate it — I want to be good immediately", icon: "😤" },
+      { label: "Fine with it as long as I improve quickly", icon: "📈" },
+      { label: "The struggle is part of the fun for me", icon: "💪" },
+      { label: "I don't care about being good, just enjoying it", icon: "🌸" }
     ]
   },
   {
     id: 5,
-    question: "Where do you spend most of your time?",
-    subtitle: "Your environment shapes what hobbies are actually realistic.",
+    question: "What's your living situation like?",
+    subtitle: "We need to know what's actually possible for you.",
     options: [
-      { label: "City — apartments, gyms, cafes", icon: "🌆" },
-      { label: "Suburbs — house, backyard, nearby parks", icon: "🏡" },
-      { label: "Near nature — trails, water, open space", icon: "🌲" },
-      { label: "Mostly indoors, doesn't matter", icon: "🏠" }
+      { label: "City apartment — small space, big energy", icon: "🌆" },
+      { label: "House with outdoor space I can use", icon: "🏡" },
+      { label: "Near nature — trails, water, open land", icon: "🌲" },
+      { label: "Honestly I'm mostly indoors regardless", icon: "🏠" }
     ]
   },
   {
     id: 6,
-    question: "How social do you want this hobby to be?",
-    subtitle: "Honest answer leads to a better match.",
+    question: "Your ideal hobby involves other people...",
+    subtitle: "There's no right answer, just yours.",
     options: [
-      { label: "Solo only — my time, my pace", icon: "🧘" },
-      { label: "Occasional group, mostly solo", icon: "👤" },
-      { label: "Mix of solo and social", icon: "👥" },
-      { label: "The more people the better", icon: "🎉" }
+      { label: "Zero people. My time, my rules, my peace", icon: "🧘" },
+      { label: "Mostly solo but a community in the background", icon: "👤" },
+      { label: "A mix — alone time and social time", icon: "👥" },
+      { label: "The whole point is being around people", icon: "🎉" }
     ]
   },
   {
     id: 7,
-    question: "What's your honest relationship with consistency?",
-    subtitle: "This helps us match you to something you'll actually stick with.",
+    question: "What killed your last hobby attempt?",
+    subtitle: "Everyone has one. This helps us not repeat history.",
     options: [
-      { label: "I stick to things once I start", icon: "🎯" },
-      { label: "Good for a few weeks, then it fades", icon: "📅" },
-      { label: "I need variety or I get bored", icon: "🔀" },
-      { label: "I do things whenever the mood hits", icon: "🌙" }
+      { label: "I never actually started, just thought about it", icon: "💭" },
+      { label: "I got bored after a few weeks", icon: "😴" },
+      { label: "It cost too much money to keep going", icon: "💸" },
+      { label: "Life got busy and it just faded out", icon: "🌀" }
     ]
   }
 ];
