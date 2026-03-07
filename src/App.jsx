@@ -4,79 +4,79 @@ import { useState, useEffect } from "react";
 const questions = [
   {
     id: 1,
-    question: "Be honest. Why are you actually here?",
-    subtitle: "No judgment. We've heard it all.",
+    question: "You just got home after a long exhausting day. You have 2 free hours. What do you actually do?",
+    subtitle: "Be honest — not what you wish you did.",
     options: [
-      { label: "I'm so bored I googled 'what to do with my life'", icon: "😵" },
-      { label: "I need something that isn't my phone or Netflix", icon: "📵" },
-      { label: "Work is draining me and I need an escape", icon: "🏃" },
-      { label: "I want to actually be good at something", icon: "🎯" }
+      { label: "Crash on the couch and scroll until I fall asleep", icon: "📱" },
+      { label: "Put on music and do something with my hands", icon: "🎵" },
+      { label: "Go outside or move my body somehow", icon: "🚶" },
+      { label: "Get into a rabbit hole — YouTube, reading, researching", icon: "🕳️" }
     ]
   },
   {
     id: 2,
-    question: "It's Saturday at 11am. What are you actually doing?",
-    subtitle: "Not what you wish you were doing. What you're actually doing.",
+    question: "Your friend texts: 'Want to try a pottery class with me Saturday?' Your honest gut reaction is...",
+    subtitle: "First instinct only.",
     options: [
-      { label: "Already up and doing something physical", icon: "⚡" },
-      { label: "Coffee in hand, easing into the day slowly", icon: "☕" },
-      { label: "Still in bed, phone in hand, no regrets", icon: "🛌" },
-      { label: "It depends on my mood honestly", icon: "🎲" }
+      { label: "Yes immediately — sounds fun and different", icon: "🙌" },
+      { label: "Maybe, depends how I feel Saturday", icon: "🤔" },
+      { label: "I'd rather do something more active honestly", icon: "🏃" },
+      { label: "I'd prefer something I can do alone at home", icon: "🏠" }
     ]
   },
   {
     id: 3,
-    question: "Which of these sounds the most fun to you?",
-    subtitle: "Go with your gut — don't overthink it.",
+    question: "You're at a party and someone asks 'so what do you do for fun?' You feel...",
+    subtitle: "This tells us more than you think.",
     options: [
-      { label: "Making or building something with my hands", icon: "🛠️" },
-      { label: "Moving my body and being active", icon: "🏃" },
-      { label: "Getting lost in a world of ideas", icon: "🧠" },
-      { label: "Creating something artistic or expressive", icon: "🎨" }
+      { label: "Embarrassed — I genuinely have no answer right now", icon: "😬" },
+      { label: "I talk about work because that's mostly my life", icon: "💼" },
+      { label: "I mention something but wish it was more interesting", icon: "😅" },
+      { label: "I have things but I want something more fulfilling", icon: "🌱" }
     ]
   },
   {
     id: 4,
-    question: "How do you feel when you're bad at something new?",
-    subtitle: "This is more revealing than you think.",
+    question: "You try something new and you're terrible at it the first time. You...",
+    subtitle: "Gut reaction — what actually happens?",
     options: [
-      { label: "I hate it — I want to be good immediately", icon: "😤" },
-      { label: "Fine with it as long as I improve quickly", icon: "📈" },
-      { label: "The struggle is part of the fun for me", icon: "💪" },
-      { label: "I don't care about being good, just enjoying it", icon: "🌸" }
+      { label: "Quit. If I'm not good fast, it's not for me", icon: "🚪" },
+      { label: "Get frustrated but keep going if it was fun", icon: "😤" },
+      { label: "Laugh it off — being bad is part of learning", icon: "😂" },
+      { label: "Get obsessed — I have to figure this out now", icon: "🔥" }
     ]
   },
   {
     id: 5,
-    question: "What's your living situation like?",
-    subtitle: "We need to know what's actually possible for you.",
+    question: "It's a perfect free Sunday with no plans. Where do you end up?",
+    subtitle: "Go with what sounds most natural to you.",
     options: [
-      { label: "City apartment — small space, big energy", icon: "🌆" },
-      { label: "House with outdoor space I can use", icon: "🏡" },
-      { label: "Near nature — trails, water, open land", icon: "🌲" },
-      { label: "Honestly I'm mostly indoors regardless", icon: "🏠" }
+      { label: "Somewhere outside — park, trail, beach, anywhere", icon: "🌤️" },
+      { label: "A coffee shop or cozy spot in the city", icon: "☕" },
+      { label: "At home, in my own comfortable space", icon: "🛋️" },
+      { label: "Wherever — I just need something to do", icon: "🗺️" }
     ]
   },
   {
     id: 6,
-    question: "Your ideal hobby involves other people...",
-    subtitle: "There's no right answer, just yours.",
+    question: "You find a hobby you love. A few weeks in, someone invites you to a group meetup for it. You...",
+    subtitle: "What would you actually do?",
     options: [
-      { label: "Zero people. My time, my rules, my peace", icon: "🧘" },
-      { label: "Mostly solo but a community in the background", icon: "👤" },
-      { label: "A mix — alone time and social time", icon: "👥" },
-      { label: "The whole point is being around people", icon: "🎉" }
+      { label: "Hard pass — this is my personal solo thing", icon: "🙅" },
+      { label: "Maybe eventually, but not yet", icon: "🐢" },
+      { label: "Sure, sounds like a good way to improve", icon: "👍" },
+      { label: "Yes — meeting people who love the same thing sounds great", icon: "🤝" }
     ]
   },
   {
     id: 7,
-    question: "What killed your last hobby attempt?",
-    subtitle: "Everyone has one. This helps us not repeat history.",
+    question: "You spent $40 on supplies for a hobby. Two weeks later you haven't touched them. You...",
+    subtitle: "We've all been here. What's your move?",
     options: [
-      { label: "I never actually started, just thought about it", icon: "💭" },
-      { label: "I got bored after a few weeks", icon: "😴" },
-      { label: "It cost too much money to keep going", icon: "💸" },
-      { label: "Life got busy and it just faded out", icon: "🌀" }
+      { label: "Feel guilty every time I see them and do nothing", icon: "😓" },
+      { label: "Tell myself I'll start 'next week' for 3 months", icon: "📅" },
+      { label: "Sell them and accept it wasn't for me", icon: "💸" },
+      { label: "This is exactly why I need the right hobby first", icon: "💡" }
     ]
   }
 ];
