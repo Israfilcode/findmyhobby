@@ -302,7 +302,7 @@ Respond ONLY with valid JSON, no markdown:
               onMouseOut={e => { e.currentTarget.style.transform = "scale(1)"; e.currentTarget.style.boxShadow = `0 0 56px ${BG}`; }}>
               Find My Hobby
             </button>
-            <p style={{ marginTop: 14, fontSize: 13, color: "rgba(255,255,255,0.42)", letterSpacing: "0.06em" }}>7 questions · Results from $1.99</p>
+            <p style={{ marginTop: 14, fontSize: 13, color: "rgba(255,255,255,0.42)", letterSpacing: "0.06em" }}>7 questions · Results from $0.99</p>
 
             {/* How the AI works */}
             <div style={{ width: "100%", maxWidth: 860, marginTop: 72 }}>
@@ -323,8 +323,8 @@ Respond ONLY with valid JSON, no markdown:
               <p style={{ fontSize: 12, color: "rgba(255,255,255,0.50)", letterSpacing: "0.16em", marginBottom: 24 }}>SIMPLE PRICING</p>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
                 {[
-                  { price: "$1.99", title: "Basic Results", perks: ["5 matched hobbies", "Starter kit", "First week plan"], highlight: false },
-                  { price: "$3.99", title: "Deep Research", perks: ["Everything in Basic", "30-day action plan", "Mistakes to avoid"], highlight: true }
+                  { price: "$0.99", title: "Basic Results", perks: ["5 matched hobbies", "Starter kit", "First week plan"], highlight: false },
+                  { price: "$2.99", title: "Deep Research", perks: ["Everything in Basic", "30-day action plan", "Mistakes to avoid"], highlight: true }
                 ].map(tier => (
                   <div key={tier.price} style={{ background: BD, border: `1px solid ${BB}`, borderRadius: 18, padding: "22px 20px", textAlign: "left" }}>
 
@@ -434,7 +434,7 @@ Respond ONLY with valid JSON, no markdown:
               {/* Basic */}
               <div style={{ background: BD, border: `1px solid ${BB}`, borderRadius: 20, padding: "24px", display: "flex", flexDirection: "column" }}>
                 <div style={{ fontSize: 13, color: BL, marginBottom: 6 }}>Basic Results</div>
-                <div style={{ fontSize: 34, fontWeight: 700, color: BL, marginBottom: 4 }}>$1.99</div>
+                <div style={{ fontSize: 34, fontWeight: 700, color: BL, marginBottom: 4 }}>$0.99</div>
                 <div style={{ fontSize: 12, color: "rgba(255,255,255,0.48)", marginBottom: 18 }}>one-time · instant</div>
                 <div style={{ display: "flex", flexDirection: "column", gap: 7, marginBottom: 22, flex: 1 }}>
                   {["5 matched hobbies", "Why each fits you", "Starter kit per hobby", "First week action plan", "Amazon product links"].map(p => (
@@ -447,7 +447,7 @@ Respond ONLY with valid JSON, no markdown:
                   style={{ background: `linear-gradient(135deg, ${B}, #2550CC)`, border: "none", color: "#fff", padding: "13px", borderRadius: 100, fontSize: 14, fontWeight: 700, cursor: paymentLoading ? "not-allowed" : "pointer", opacity: paymentLoading ? 0.6 : 1, boxShadow: `0 0 24px ${BG}`, transition: "all 0.2s" }}
                   onMouseOver={e => { if (!paymentLoading) e.currentTarget.style.boxShadow = `0 0 40px rgba(75,127,245,0.5)`; }}
                   onMouseOut={e => { e.currentTarget.style.boxShadow = `0 0 24px ${BG}`; }}>
-                  {paymentLoading && plan === "basic" ? "Processing..." : "Unlock $1.99"}
+                  {paymentLoading && plan === "basic" ? "Processing..." : "Unlock $0.99"}
                 </button>
               </div>
 
@@ -455,7 +455,7 @@ Respond ONLY with valid JSON, no markdown:
               <div style={{ background: BD, border: `1px solid ${BB}`, borderRadius: 20, padding: "24px", display: "flex", flexDirection: "column", position: "relative", overflow: "hidden" }}>
 
                 <div style={{ fontSize: 13, color: BL, marginBottom: 6 }}>Deep Research</div>
-                <div style={{ fontSize: 34, fontWeight: 700, color: BL, marginBottom: 4 }}>$3.99</div>
+                <div style={{ fontSize: 34, fontWeight: 700, color: BL, marginBottom: 4 }}>$2.99</div>
                 <div style={{ fontSize: 12, color: "rgba(255,255,255,0.48)", marginBottom: 18 }}>one-time · instant</div>
                 <div style={{ display: "flex", flexDirection: "column", gap: 7, marginBottom: 22, flex: 1 }}>
                   {["Everything in Basic", "Full 30-day plan", "Common mistakes guide", "Level-up roadmap", "Advanced pro tips", "6+ starter items"].map(p => (
@@ -468,7 +468,7 @@ Respond ONLY with valid JSON, no markdown:
                   style={{ background: `linear-gradient(135deg, ${B}, #2550CC)`, border: "none", color: "#fff", padding: "13px", borderRadius: 100, fontSize: 14, fontWeight: 700, cursor: paymentLoading ? "not-allowed" : "pointer", opacity: paymentLoading ? 0.6 : 1, boxShadow: `0 0 24px ${BG}`, transition: "all 0.2s" }}
                   onMouseOver={e => { if (!paymentLoading) e.currentTarget.style.boxShadow = `0 0 40px rgba(75,127,245,0.5)`; }}
                   onMouseOut={e => { e.currentTarget.style.boxShadow = `0 0 24px ${BG}`; }}>
-                  {paymentLoading && plan === "deep" ? "Processing..." : "Unlock $3.99"}
+                  {paymentLoading && plan === "deep" ? "Processing..." : "Unlock $2.99"}
                 </button>
               </div>
             </div>
@@ -701,7 +701,7 @@ Respond ONLY with valid JSON, no markdown:
             <p style={{ color: "rgba(255,255,255,0.45)", lineHeight: 1.8, fontSize: 13, marginBottom: 20 }}>Last updated: March 2026</p>
             <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14, marginBottom: 16 }}>By accessing or using FindMyHobby.org (the "Service"), you agree to be bound by these Terms. If you do not agree, please do not use the Service.</p>
             <h3 style={{ color: "#92BFFF", marginTop: 20, marginBottom: 8 }}>The Service</h3>
-            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>FindMyHobby.org provides AI-powered hobby recommendations in three tiers: Free (basic suggestions), Basic ($1.99 one-time), and Deep Research ($3.99 one-time). Results are for your personal, non-commercial use only.</p>
+            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>FindMyHobby.org provides AI-powered hobby recommendations in three tiers: Free (basic suggestions), Basic ($0.99 one-time), and Deep Research ($2.99 one-time). Results are for your personal, non-commercial use only.</p>
             <h3 style={{ color: "#92BFFF", marginTop: 20, marginBottom: 8 }}>Eligibility</h3>
             <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>You must be at least 13 years old to use the Service. Users under 18 must have parental or guardian consent.</p>
             <h3 style={{ color: "#92BFFF", marginTop: 20, marginBottom: 8 }}>Payments & Billing</h3>
@@ -729,7 +729,7 @@ Respond ONLY with valid JSON, no markdown:
             <h3 style={{ color: "#92BFFF", marginTop: 20, marginBottom: 8 }}>Refunds Will Not Be Issued If:</h3>
             <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>• You changed your mind after receiving complete, fully generated results.<br/>• More than 14 days have passed since the date of purchase.<br/>• You have previously received a refund from FindMyHobby.org.</p>
             <h3 style={{ color: "#92BFFF", marginTop: 20, marginBottom: 8 }}>Upgrades</h3>
-            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>If you purchased Basic ($1.99) and want to upgrade to Deep Research ($3.99), email us and we will credit your $1.99 — you only pay the $2.00 difference.</p>
+            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>If you purchased Basic ($0.99) and want to upgrade to Deep Research ($2.99), email us and we will credit your $0.99 — you only pay the $2.00 difference.</p>
             <h3 style={{ color: "#92BFFF", marginTop: 20, marginBottom: 8 }}>How to Request a Refund</h3>
             <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.8, fontSize: 14 }}>Email support@findmyhobby.org with your purchase email, date of purchase, amount charged, and a brief description of the issue. We respond within 2 business days. Approved refunds are returned to your original payment method within 5–10 business days.</p>
             <h3 style={{ color: "#92BFFF", marginTop: 20, marginBottom: 8 }}>Payment Processing</h3>
